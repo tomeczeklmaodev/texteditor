@@ -1,0 +1,47 @@
+#include "resource.h"
+
+// icons
+IDI_TITLE ICON "notepad.ico"
+IDI_WIN ICON "notepad.ico"
+
+// menubar
+IDC_MENU MENU
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "New", IDM_FILENEW // new file
+		MENUITEM "Open", IDM_FILEOPEN // open file
+		MENUITEM "Save", IDM_FILESAVE // save file
+		MENUITEM "Save as...", IDM_FILESAVEAS // save file as...
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit", IDM_FILEEXIT // exit
+	END
+	POPUP "&Edit"
+	BEGIN
+		MENUITEM "Cut", IDM_EDITCUT // cut (ctrl+x)
+		MENUITEM "Copy", IDM_EDITCOPY // copy (ctrl+c)
+		MENUITEM "Paste", IDM_EDITPASTE // paste (ctrl+v)
+	END
+	POPUP "F&ormat"
+	BEGIN
+		MENUITEM "Font", IDM_FORMATFONT // font change dialog
+		// add "Word wrap" option later
+	END
+	POPUP "&About"
+	BEGIN
+		MENUITEM "About texteditor", IDM_ABOUTWND
+		MENUITEM "Visit repository", IDM_ABOUTREPO
+	END
+END
+
+// accelerator table
+IDC_ACCEL ACCELERATORS
+BEGIN
+	IDK_A, IDM_FILESAVEAS, VIRTKEY, CONTROL // save file as key shortcut
+	IDK_F, IDM_FORMATFONT, VIRTKEY, CONTROL // change font key shortcut
+	IDK_N, IDM_FILENEW, VIRTKEY, CONTROL // new file key shortcut
+	IDK_O, IDM_FILEOPEN, VIRTKEY, CONTROL // open file key shortcut
+	IDK_S, IDM_FILESAVE, VIRTKEY, CONTROL // save file key shortcut
+	IDK_F1, IDM_ABOUTWND, VIRTKEY // about texteditor key shortcut
+	IDK_F2, IDM_ABOUTREPO, VIRTKEY // visit repository key shortcut
+END
