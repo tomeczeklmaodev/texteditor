@@ -24,8 +24,8 @@ BEGIN
 	END
 	POPUP "F&ormat"
 	BEGIN
+		MENUITEM "Word wrap", 0, GRAYED // word wrapping, IDM_FORMATWORDWRAP
 		MENUITEM "Font", IDM_FORMATFONT // font change dialog
-		// add "Word wrap" option later
 	END
 	POPUP "&About"
 	BEGIN
@@ -37,7 +37,7 @@ END
 // accelerator table
 IDC_ACCEL ACCELERATORS
 BEGIN
-	IDK_A, IDM_FILESAVEAS, VIRTKEY, CONTROL // save file as key shortcut
+	IDK_Q, IDM_FILESAVEAS, VIRTKEY, CONTROL // save file as key shortcut
 	IDK_F, IDM_FORMATFONT, VIRTKEY, CONTROL // change font key shortcut
 	IDK_N, IDM_FILENEW, VIRTKEY, CONTROL // new file key shortcut
 	IDK_O, IDM_FILEOPEN, VIRTKEY, CONTROL // open file key shortcut
