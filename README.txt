@@ -1,6 +1,6 @@
 texteditor - a simple text editor written using C++ with Win32 API.
 
-Version: 0.1 (dd-mm-rrrr)
+Version: 0.1-beta (08-07-2022)
 Developer: tomeczeklmaodev
 Description: ---
 
